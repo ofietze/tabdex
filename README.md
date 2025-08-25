@@ -1,8 +1,9 @@
 # tabdex
 
-Navigate through all your open tabs effortlessly with tabdex. Features a clean, full-page interface with instant search and vim-style keyboard navigation (j/k keys). Click the extension icon to open the tab navigator in a new tab, search through your tabs by title or URL, and switch instantly with Enter. Perfect for power users managing multiple tabs. Automatically adjusts to your dark or light theme.
-
-This works great in combination with vimium and tree style tab.
+Navigate through all your open tabs effortlessly with tabdex. Features a clean, full-page interface with instant search
+and vim-style keyboard navigation (j/k keys). Click the extension icon to open the tab navigator in a new tab,
+search through your tabs by title or URL, and switch instantly with Enter. Perfect for power users managing multiple tabs.
+Automatically adjusts to your dark or light theme.
 
 ## Screenshots
 
@@ -15,16 +16,6 @@ This works great in combination with vimium and tree style tab.
 ### Search Filter
 ![Search Filter](screens/filter.png)
 
-## Features
-
-- **Instant Search** - Find tabs by title or URL
-- **Keyboard Navigation** - Use j/k keys to navigate, Enter to switch
-- **Visual Indicators** - See active, pinned, and audio-playing tabs at a glance
-- **Theme Support** - Automatically matches your browser's dark/light theme
-- **Clean Interface** - Full-page view with plenty of space to see your tabs
-- **Auto Refresh** - Tab list updates when you return to the navigator
-- **Fast Switching** - Instant tab switching with automatic cleanup
-
 ## Usage
 
 1. Click the tabdex extension icon in your toolbar
@@ -34,8 +25,10 @@ This works great in combination with vimium and tree style tab.
    - **j** or **↓** - Move down
    - **k** or **↑** - Move up  
    - **Enter** - Switch to selected tab
-   - **Escape** - Close the navigator
 5. Click any tab to switch to it
+
+I recommend putting the tabex tab in your first slot so you can quickly navigate to it from anywhere.
+For navigating to your first tab use (cmd+1 on mac, ctrl+1 on windows or alt+1 on linux)
 
 ## Perfect Companions
 
@@ -46,7 +39,7 @@ tabdex works exceptionally well with:
 ## Installation
 
 ### From Firefox Add-ons (Coming Soon)
-Install directly from the Firefox Add-ons store.
+Install directly from the [Firefox Add-ons store](https://addons.mozilla.org/en-GB/firefox/addon/tabdex/).
 
 ### Manual Installation
 1. Download the latest release
@@ -72,7 +65,3 @@ web-ext build
 # Run in development
 web-ext run
 ```
-
-## License
-
-MIT License - see LICENSE file for details.
