@@ -5,6 +5,7 @@ class TabNavigator {
     this.selectedIndex = 0;
     this.searchInput = document.getElementById('searchInput');
     this.tabsList = document.getElementById('tabsList');
+    this.navigationMode = false;
     
     this.init();
   }
@@ -54,24 +55,43 @@ class TabNavigator {
       tab.url.toLowerCase().includes(term)
     );
     this.selectedIndex = 0;
+    this.navigationMode = false;
     this.renderTabs();
   }
   
   handleKeydown(e) {
     switch(e.key) {
       case 'j':
+        if (this.navigationMode) {
+          e.preventDefault();
+          this.navigateDown();
+        }
+        break;
+      case 'k':
+        if (this.navigationMode) {
+          e.preventDefault();
+          this.navigateUp();
+        }
+        break;
       case 'ArrowDown':
         e.preventDefault();
         this.navigateDown();
         break;
-      case 'k':
       case 'ArrowUp':
         e.preventDefault();
         this.navigateUp();
         break;
       case 'Enter':
         e.preventDefault();
-        this.switchToSelectedTab();
+        if (this.navigationMode) {
+          this.switchToSelectedTab();
+        } else {
+          if (this.filteredTabs.length === 1) {
+            this.switchToSelectedTab();
+          } else {
+            this.navigationMode = true;
+          }
+        }
         break;
     }
   }
@@ -113,6 +133,7 @@ class TabNavigator {
         this.searchInput.value = '';
         this.filteredTabs = [...this.tabs];
         this.selectedIndex = 0;
+        this.navigationMode = false;
         this.renderTabs();
       } catch (error) {
         console.error('Error switching to tab:', error);
